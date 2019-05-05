@@ -1,0 +1,201 @@
+{% load static i18n compress%}
+<!DOCTYPE html>
+<html lang="en">
+{# <head> #}
+{#     <meta charset="UTF-8"> #}
+{#     <meta name="description" content=""> #}
+{#     <meta http-equiv="X-UA-Compatible" content="IE=edge"> #}
+{#     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> #}
+{#     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags --> #}
+{#  #}
+{#     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> #}
+{#     <!--[if lt IE 9]> #}
+{#       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> #}
+{#     <![endif]--> #}
+{#  #}
+{#     <!-- Title --> #}
+{#     <title>Project Pawz</title> #}
+{#     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}"> #}
+{#  #}
+{#     {% block css %} #}
+{#     <!-- Your stuff: Third-party CSS libraries go here --> #}
+{#     {% compress css %} #}
+{#     <!-- This file stores project-specific CSS --> #}
+{#     <link href="{% static 'css/animate.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/audioplayer.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/bootstrap.min.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/classy-nav.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/font-awesome.min.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/magnific-popup.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/one-music-icon.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/owl.carousel.min.min.css' %}" rel="stylesheet"> #}
+{#     <link href="{% static 'css/project.min.css' %}" rel="stylesheet"> #}
+{#     {% endcompress %} #}
+{#     {% endblock %} #}
+{#  #}
+{# </head> #}
+{% include "includes/_head.html" %}
+
+<body>
+    <!-- Preloader -->
+    {% include "includes/_preloader.html" %}
+    {# <div class="preloader d-flex align-items-center justify-content-center"> #}
+    {#     <div class="lds-ellipsis"> #}
+    {#         <div></div> #}
+    {#         <div></div> #}
+    {#         <div></div> #}
+    {#         <div></div> #}
+    {#     </div> #}
+    {# </div> #}
+
+    <!-- ##### Header Area Start ##### -->
+    {% include "includes/_header.html" %}
+    {# <header class="header-area"> #}
+    {#     <!-- Navbar Area --> #}
+    {#     <div class="oneMusic-main-menu"> #}
+    {#         <div class="classy-nav-container breakpoint-off"> #}
+    {#             <div class="container"> #}
+    {#                 <!-- Menu --> #}
+    {#                 <nav class="classy-navbar justify-content-between" id="oneMusicNav"> #}
+    {#  #}
+    {#                     <!-- Nav brand --> #}
+    {#                     <a class="nav-brand" href="{% url 'home' %}"><object data="static/images/core-img/logo.svg" type="image/svg+xml"></object></a> #}
+    {#  #}
+    {#                     <!-- Navbar Toggler --> #}
+    {#                     <div class="classy-navbar-toggler"> #}
+    {#                         <span class="navbarToggler"><span></span><span></span><span></span></span> #}
+    {#                     </div> #}
+    {#  #}
+    {#                     <!-- Menu --> #}
+    {#                     <div class="classy-menu"> #}
+    {#  #}
+    {#                         <!-- Close Button --> #}
+    {#                         <div class="classycloseIcon"> #}
+    {#                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div> #}
+    {#                         </div> #}
+    {#  #}
+    {#                         <!-- Nav Start --> #}
+    {#                         <div class="classynav"> #}
+    {#                           <ul> #}
+    {#                             <li><a href="{% url 'home' %}">Home</a></li> #}
+    {#                             <li><a href="#">Works</a> #}
+    {#                               <ul class="dropdown"> #}
+    {#                                 <li><a href="{% url 'about' %}">About</a></li> #}
+    {#                                 <li><a href="#">Events</a></li> #}
+    {#                                 <li><a href="#">History</a></li> #}
+    {#                                 <li><a href="#">Current</a></li> #}
+    {#                                 <li><a href="#">Adoptables</a></li> #}
+    {#                                 <li><a href="#">Therapy Dogs</a></li> #}
+    {#                                 <li><a href="#">Policy</a></li> #}
+    {#                                 <li><a href="#">Reports</a></li> #}
+    {#                               </ul> #}
+    {#                             </li> #}
+    {#                             <li><a href="#">Participate</a> #}
+    {#                               <ul class="dropdown"> #}
+    {#                                 <li><a href="#">Donate</a></li> #}
+    {#                                 <li><a href="#">Volunteer</a></li> #}
+    {#                                 <li><a href="#">Adopt</a></li> #}
+    {#                                 <li><a href="#">Foster</a></li> #}
+    {#                                 <li><a href="#">Sponsor</a></li> #}
+    {#                                 <li><a href="#">Join Us!</a></li> #}
+    {#                                 <li><a href="#">Contact</a></li> #}
+    {#                               </ul> #}
+    {#                             </li> #}
+    {#                             <li><a href="#">Learn</a></li> #}
+    {#                             <li><a href="#">News</a></li> #}
+    {#  #}
+    {#                             <!-- Login/Register & Cart Button --> #}
+    {#                             <div class="login-register-cart-button d-flex align-items-center"> #}
+    {#                               <!-- Login/Register --> #}
+    {#                               <div class="login-register-btn mr-50"> #}
+    {#                                 {% if request.user.is_authenticated %} #}
+    {#                                 {# URL provided by django-allauth/account/urls.py #} #}
+    {#                                 <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li> #}
+    {#                                 {# URL provided by django-allauth/account/urls.py #} #}
+    {#                                 <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li> #}
+    {#                                 {% else %} #}
+    {#                                 {# URL provided by django-allauth/account/urls.py #} #}
+    {#                                 <li><a id="sign-up-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li> #}
+    {#                                 {# URL provided by django-allauth/account/urls.py #} #}
+    {#                                 <li><a id="log-in-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li> #}
+    {#                                 {% endif %} #}
+    {#                               </div> #}
+    {#                             </div> #}
+    {#                             <li><a href="#">Donate Now!</a></li> #}
+    {#                           </ul> #}
+    {#                         </div> #}
+    {#                         <!-- Nav End --> #}
+    {#  #}
+    {#                     </div> #}
+    {#                 </nav> #}
+    {#             </div> #}
+    {#         </div> #}
+    {#     </div> #}
+    {# </header> #}
+    <!-- ##### Header Area End ##### -->
+
+    <div class="container">
+
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+      {% endfor %}
+      {% endif %}
+
+      {% block content %}
+      <p>Use this document as a way to quick start any new project.</p>
+      {% endblock content %}
+
+    </div> <!-- /container -->
+
+    {% block modal %}{% endblock modal %}
+
+    <!-- ##### Footer Area Start ##### -->
+    {% include "includes/_footer.html" %}
+{#     <footer class="footer-area"> #}
+{#         <div class="container"> #}
+{#             <div class="row d-flex flex-wrap align-items-center"> #}
+{#                 <div class="col-12 col-md-6"> #}
+{#                     <a href="#"><img src="static/images/core-img/logo.png" alt=""></a> #}
+{#                     <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> #}
+{# Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> #}
+{# <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p> #}
+{#                 </div> #}
+{#  #}
+{#                 <div class="col-12 col-md-6"> #}
+{#                     <div class="footer-nav"> #}
+{#                         <ul> #}
+{#                             <li><a href="#">Home</a></li> #}
+{#                             <li><a href="#">Albums</a></li> #}
+{#                             <li><a href="#">Events</a></li> #}
+{#                             <li><a href="#">News</a></li> #}
+{#                             <li><a href="#">Contact</a></li> #}
+{#                         </ul> #}
+{#                     </div> #}
+{#                 </div> #}
+{#             </div> #}
+{#         </div> #}
+{#     </footer> #}
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    {% include "includes/_javascript.html" %}
+    {# <!-- Le javascript #}
+    {#   ================================================== --> #}
+    {#   <!-- Placed at the end of the document so the pages load faster --> #}
+    {#   {% block javascript %} #}
+    {#   <!-- Vendor dependencies bundled as one file--> #}
+    {#   {% compress js %} #}
+    {#   <script src="{% static 'js/vendors.min.js' %}"></script> #}
+    {#   {% endcompress %} #}
+    {#  #}
+    {#   <!-- place project specific Javascript in this file --> #}
+    {#   {% compress js %} #}
+    {#   <script src="{% static 'js/project.min.js' %}"></script> #}
+    {#   {% endcompress %} #}
+    {#  #}
+    {#   {% endblock javascript %} #}
+
+</body>
+
+</html>

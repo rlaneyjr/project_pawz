@@ -1,0 +1,28 @@
+  "cookiecutter": {
+    "project_name": "Project Pawz",
+    "project_slug": "projectpawzrescue",
+    "description": "Project Pawz - Rescue. Love. Repeat.",
+    "author_name": "Ricky Laney",
+    "domain_name": "projectpawzrescue.org",
+    "email": "rlaneyjr@gmail.com",
+    "version": "0.1.0",
+    "open_source_license": "MIT",
+    "timezone": "UTC",
+    "windows": "n",
+    "use_pycharm": "y",
+    "use_docker": "n",
+    "postgresql_version": "10.5",
+    "js_task_runner": "Gulp",
+    "custom_bootstrap_compilation": "n",
+    "use_compressor": "y",
+    "use_celery": "n",
+    "use_mailhog": "n",
+    "use_sentry": "n",
+    "use_whitenoise": "y",
+    "use_heroku": "n",
+    "use_travisci": "n",
+    "keep_local_envs_in_vcs": "y",
+    "debug": "n",
+    "_template": "cookiecutter-django"
+  }
+}

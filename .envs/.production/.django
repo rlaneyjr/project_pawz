@@ -1,0 +1,51 @@
+# General
+# ------------------------------------------------------------------------------
+DJANGO_READ_DOT_ENV_FILE=True
+DJANGO_SETTINGS_MODULE=config.settings.production
+DJANGO_SECRET_KEY='m4z6531w$wg%9mlh3eri)0f$v1bdka)4ul9(87!=aal4add@1d'
+DJANGO_ADMIN_URL='admin/'
+DJANGO_ALLOWED_HOSTS='.projectpawzrescue.org'
+
+# Security
+# ------------------------------------------------------------------------------
+# TIP: better off using DNS, however, redirect is OK too
+DJANGO_SECURE_SSL_REDIRECT=False
+
+# Email
+# ------------------------------------------------------------------------------
+MAILGUN_API_KEY=
+DJANGO_SERVER_EMAIL=
+MAILGUN_DOMAIN=
+
+# SendGrid API (to send Emails)
+# ------------------------------------------------------------------------------
+SENDGRID_API_KEY='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'
+
+# SendGrid SMTP (to send Emails)
+# ------------------------------------------------------------------------------
+SENDGRID_SERVER=smtp.sendgrid.net
+SENDGRID_PORT=465 # 25, 587 for unencrypted/TLS connections or 465 for SSL connections
+SENDGRID_USERNAME=apikey
+SENDGRID_PASSWORD='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'
+
+# AWS
+# ------------------------------------------------------------------------------
+DJANGO_AWS_ACCESS_KEY_ID=
+DJANGO_AWS_SECRET_ACCESS_KEY=
+DJANGO_AWS_STORAGE_BUCKET_NAME=
+
+# django-allauth
+# ------------------------------------------------------------------------------
+DJANGO_ACCOUNT_ALLOW_REGISTRATION=True
+
+# django-compressor
+# ------------------------------------------------------------------------------
+COMPRESS_ENABLED=
+
+# Gunicorn
+# ------------------------------------------------------------------------------
+WEB_CONCURRENCY=4
+
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://127.0.0.1:6379/0

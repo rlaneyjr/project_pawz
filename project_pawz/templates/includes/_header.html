@@ -1,0 +1,85 @@
+{% load static i18n compress %}
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a class="nav-brand" href="{% url 'home' %}"><object data="static/images/core-img/logo.svg" type="image/svg+xml"></object></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                              <ul>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="#">Works</a>
+                                  <ul class="dropdown">
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Current</a></li>
+                                    <li><a href="#">Adoptables</a></li>
+                                    <li><a href="#">Therapy Dogs</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Reports</a></li>
+                                  </ul>
+                                </li>
+                                <li><a href="#">Participate</a>
+                                  <ul class="dropdown">
+                                    <li><a href="#">Donate</a></li>
+                                    <li><a href="#">Volunteer</a></li>
+                                    <li><a href="#">Adopt</a></li>
+                                    <li><a href="#">Foster</a></li>
+                                    <li><a href="#">Sponsor</a></li>
+                                    <li><a href="#">Join Us!</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                  </ul>
+                                </li>
+                                <li><a href="#">Learn</a></li>
+                                <li><a href="#">News</a></li>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                  <!-- Login/Register -->
+                                  <div class="login-register-btn mr-50">
+                                    {% if request.user.is_authenticated %}
+                                    {# URL provided by django-allauth/account/urls.py #}
+                                    <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
+                                    {# URL provided by django-allauth/account/urls.py #}
+                                    <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+                                    {% else %}
+                                    {# URL provided by django-allauth/account/urls.py #}
+                                    <li><a id="sign-up-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
+                                    {# URL provided by django-allauth/account/urls.py #}
+                                    <li><a id="log-in-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
+                                    {% endif %}
+                                  </div>
+                                </div>
+                                <li><a href="#">Donate Now!</a></li>
+                              </ul>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->

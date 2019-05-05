@@ -1,0 +1,16 @@
+{% load static i18n compress %}
+    <!-- ##### All Javascript Script ##### -->
+    <!-- ================================= -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      {% block javascript %}
+      <!-- Vendor dependencies bundled as one file-->
+      {% compress js %}
+      <script src="{% static 'js/vendors.js' %}"></script>
+      {% endcompress %}
+
+      <!-- place project specific Javascript in this file -->
+      {% compress js %}
+      <script src="{% static 'js/project.js' %}"></script>
+      {% endcompress %}
+
+      {% endblock javascript %}
